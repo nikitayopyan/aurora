@@ -1,12 +1,69 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .sidepanel {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0 111px 0;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 3;
+        transition: .7s all;
+        &-active {
+            left: 0;
+        }
+        & .navigation__logo {
+            color: #000000;
+            font-size: 27px;
+        }
+        & .navigation__list {
+            width: 100%;
+        }
+        & .mobile {
+            display: flex;
+            flex-direction: column;
+            & .navigation {
+                &__category {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 16px;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid #F7F7F7;
+                }
+                &__info {
+                    color: #000000;
+                }
+            }
+        }
+        & .navigation {
+            &__signin::after{
+                background-color: #000000;
+            }
+            &__links {
+                margin-top: 79px;
+                width: 100%;
+                height: 48px;
+                background: #F7F7F7;
+                padding: 17px 0 16px 15px;
+                & .notRegistered {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 115px;
+                }
+                & a {
+                    color: #000000;   
+                }
+            } 
+        }
+    }
     .container {
         padding: 0 16px;
     }
-    .toppanel {
-        display: none;
-    }
     .header {
-        &__title {
+        & .toppanel {
             display: none;
         }
         .navigation {
@@ -22,11 +79,16 @@
             &__search {
                 display: none;
                 &-mobile {
-                    display: block;
+                    position: relative;
+                    & button {
+                        top: 60%;
+                        right: 12px;
+                    }
                     & input {
                         width: 100%;
                         padding: 12px;
                         height: 48px;
+                        margin-top: 15px;
                         background: #F7F7F7;
                         mix-blend-mode: normal;
                         opacity: 0.24;
@@ -54,6 +116,12 @@
                 width: 46px;
                 position: relative;
             }
+        }
+    }
+
+    .main {
+        &__title {
+            display: none;
         }
     }
 
@@ -87,7 +155,7 @@
             justify-content: space-between;
             padding: 0 16px;
             padding-bottom: 12.5px;
-            & .chevron-right {
+            & .right {
                 display: block;
                 transition: .5s all;
                 &-active {
@@ -103,5 +171,8 @@
                 display: block;
             }
         }
+    }
+    .navigation__links .notRegistered {
+        display: none;
     }
 }  

@@ -1,36 +1,99 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.footer__wrapper'),
-      dropDown = document.querySelectorAll('.footer__content'),
-      chevron = document.querySelectorAll('.chevron-right'),
-      list = document.querySelectorAll('.footer__list');
+    const dropDown = document.querySelectorAll('.footer__content'),
+          chevron = document.querySelectorAll('.right'),
+          list = document.querySelectorAll('.footer__list'),
+          hamburger = document.querySelector('.hamburger'),
+          sidePanel = document.querySelector('.sidepanel');
+
+
+    hamburger.addEventListener('click', () => {
+        sidePanel.classList.add('sidepanel-active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    sidePanel.addEventListener('click', (e) => {        
+        if (e.target === document.querySelector('.navigation__logo')){
+            sidePanel.classList.remove('sidepanel-active');
+            document.body.style.overflow = '';
+        }
+    });
 
     function show(i) {
-        chevron[i].classList.toggle('chevron-right-active');
+        chevron[i].classList.toggle('right-active');
         list[i].classList.toggle('footer__list-active');
     }
 
     dropDown.forEach((drop, i) => {
-        drop.addEventListener('click', (e) => {
+        drop.addEventListener('click', () => {
             show(i);
         })
     })
 
-    function changeNavByScroll() {
-        if (window.pageYOffset > 500) {
-            document.querySelector('.navigation').classList.add('navigation-active');
-            document.querySelector('.navigation__logo').style.color = '#000000';
-            document.querySelectorAll('.stick').forEach(stick => {
-                stick.style.cssText = 'background-color: #000000';
-            })
+    function makeBlack() {
+        document.querySelector('.header .navigation').classList.add('navigation-active');
+        document.querySelector('.header .navigation__logo').style.color = '#000000';
+        document.querySelectorAll('.stick').forEach(stick => {
+            stick.style.cssText = 'background-color: #000000';
+        })
+        document.querySelectorAll('.header .navigation__info').forEach(stick => {
+            stick.style.cssText = 'color: #000000';
+        })
+        document.querySelectorAll('.header .navigation__links a').forEach(link => {
+            link.style.cssText = 'color: #000000';
+        })
+        document.querySelector('.navigation__searchbar').style.opacity = 'inherit'
+        document.querySelectorAll('i').forEach(icon => {
+            icon.style.cssText = 'color: #000000';
+        })
+    }
+
+    function makeWhite() {
+        document.querySelector('.header .navigation').classList.remove('navigation-active');
+        document.querySelector('.header .navigation__logo').style.color = '#ffffff';
+        document.querySelectorAll('.stick').forEach(stick => {
+            stick.style.cssText = 'background-color: #ffffff';
+        })
+        document.querySelectorAll('.header .navigation__links a').forEach(link => {
+            link.style.cssText = 'color: #ffffff';
+        })
+        document.querySelectorAll('.header .navigation__info').forEach(stick => {
+            stick.style.cssText = 'color: #ffffff';
+        })
+        document.querySelector('.navigation__searchbar').style.opacity = '';
+        document.querySelectorAll('i').forEach(icon => {
+            icon.style.cssText = 'color: #ffffff';
+        })
+    }
+
+    function changeNavByScrollToBlack() {
+        if (window.pageYOffset > 300) {
+            makeBlack();
         } else {
-            document.querySelector('.navigation').classList.remove('navigation-active');
-            document.querySelector('.navigation__logo').style.color = '#ffffff';
-            document.querySelectorAll('.stick').forEach(stick => {
-                stick.style.cssText = 'background-color: #ffffff';
-            })
+            makeWhite();
         }
     }
+
+    document.querySelector('.search-btn').addEventListener('click', () => {
+        document.querySelector('.header .navigation__search-mobile').classList.toggle('show');
+    })
     
-    window.addEventListener('scroll', changeNavByScroll);
-    
+    let imgArray = ['images/bg/mainbg.png', 'images/bg/mainbg2.png'], 
+        main = document.querySelector('.main'),
+        i = 1;
+
+    function switchBg() {
+        if(i > (imgArray.length - 1)) {
+            i = 1;
+            main.style.background = `url(${imgArray[0]}) center center/cover no-repeat`
+            makeWhite();
+        } else {
+            main.style.background = `url(${imgArray[i]}) center center/cover no-repeat`
+            i++;
+            makeBlack();
+        }
+    }
+
+
+    setInterval(switchBg, 5000);
+    window.addEventListener('scroll', changeNavByScrollToBlack)
 })

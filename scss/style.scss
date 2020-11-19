@@ -1,4 +1,4 @@
-@import 'blocks/header';
+@import 'blocks/main';
 @import 'blocks/mailing';
 @import 'blocks/footer';
 
@@ -8,6 +8,14 @@
     padding-right: 24px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.show {
+    display: block;
+}
+
+.sidepanel {
+    display: none;
 }
 
 input[type=text]::-ms-clear { 
