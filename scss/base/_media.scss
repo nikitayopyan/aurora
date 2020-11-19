@@ -1,0 +1,107 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    .toppanel {
+        display: none;
+    }
+    .header {
+        &__title {
+            display: none;
+        }
+        .navigation {
+            &__mobile {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 54px;
+            }
+            &__logo {
+                font-size: 32px;
+            }
+            &__search {
+                display: none;
+                &-mobile {
+                    display: block;
+                    & input {
+                        width: 100%;
+                        padding: 12px;
+                        height: 48px;
+                        background: #F7F7F7;
+                        mix-blend-mode: normal;
+                        opacity: 0.24;
+                        border-radius: 3px;
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 11px;
+                        line-height: 16px;
+                        letter-spacing: 0.8px;
+                        border: none;
+                    }
+                }
+            }
+            &__signin {
+                display: none;
+            }
+            &__register {
+                display: none;
+            }
+            &__list {
+                display: none;
+            }
+            &__account {
+                width: 46px;
+                position: relative;
+            }
+        }
+    }
+
+    .mailing {
+        padding: 32px 16px;
+    }
+
+    .footer {
+        padding: 3.5px 0 23px 0;
+        &__wrapper {
+            width: 100%;
+            padding: 0;
+            flex-direction: column;
+        }
+        &__content {
+            margin-top: 12.5px;
+            border-bottom: 1px solid #E1E0E1;
+            &:last-child {
+                border: none;
+                & div {
+                    display: none;
+                }
+                & ul {
+                    padding-left: 0;
+                    justify-content: center;
+                }
+            }
+        }
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 16px;
+            padding-bottom: 12.5px;
+            & .chevron-right {
+                display: block;
+                transition: .5s all;
+                &-active {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        &__list {
+            display: none;
+            padding-left: 16px;
+            margin-top: 5.5px;
+            &-active {
+                display: block;
+            }
+        }
+    }
+}  

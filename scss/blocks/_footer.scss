@@ -1,0 +1,64 @@
+.footer {
+    position: relative;
+    min-height: 197px;
+    padding: 26px 26px 14px 26px;
+    background: #F7F7F7;
+    &__wrapper {
+        max-width: 891px;
+        padding: 0 24px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 40px;
+    }
+    &__info {
+        .chevron-right {
+            display: none;
+        }
+    }
+    &__category {
+        font-family: Cormorant Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.16364px;
+        color: #000000;
+    }
+    &__list {
+        padding-left: 0;
+        margin-top: 17px;
+        list-style-type: none;
+    }
+    &__item {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.1px;
+        color: #000000;
+        margin-bottom: 6px;
+    }
+    &__content:last-child {
+        & ul {
+            display: flex;
+            & li {
+                margin-right: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &__copyright {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        color: #000000;
+        text-align: center;
+    }
+}

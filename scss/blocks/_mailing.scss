@@ -1,0 +1,62 @@
+.mailing {
+    min-height: 146px;
+    padding: 32px 0;
+    max-width: 440px;
+    margin: 0 auto;
+
+    & .container {
+        padding: 0;
+    }
+    &__post {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.872727px;
+        color: #000000;
+    }
+    
+    & #form {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+
+    }
+
+    & input {
+        width: 100%;
+        margin-right: 8px;
+        height: 32px;
+        padding: 8px 0px 7px 11px;
+        border: 1px solid #E1E0E1;
+        border-radius: 3px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        &::-webkit-input-placeholder {
+            color: #4A4A4A;
+        }
+    }
+
+    &__button {
+        height: 32px;
+        width: 94px;
+        border-radius: 3px;
+        background-color: #000000;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+}

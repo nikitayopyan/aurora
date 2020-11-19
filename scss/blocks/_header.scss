@@ -1,0 +1,210 @@
+.toppanel {
+    display: flex;
+    justify-content: flex-end;
+    height: 24px;
+    padding: 4px 24px;
+    & .delivery {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: center;
+        letter-spacing: 0.8px;
+        color: #000000;
+        flex: auto;
+    }
+    & .location {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        text-align: right;
+        letter-spacing: 0.0833333px;
+        color: #000000;
+
+    }
+}
+
+.header {
+    min-height: 756px;
+    background: url('../images/bg/mainbg.png') center center/cover no-repeat;
+    &__title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 204px;
+    }
+}
+
+.navigation {
+    position: fixed;
+    min-height: 132px;
+    width: 100%;
+    padding-top: 24px;
+    transition: .7s all;
+    & .container {
+        display: block;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__mobile {
+        display: none;
+    }
+    & .search-btn {
+        & i {
+            color: #ffffff;
+        }
+    }
+    &__logo {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        letter-spacing: 0.95px;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    &__search {
+        position: relative;
+        width: 584px;
+        &btn {
+            position: absolute;
+            bottom: 21px;
+            right: 10px;
+            background: rgba(0,0,0,0);
+            border: none;
+            cursor: pointer;
+        }
+        & input {
+            width: 100%;
+            padding: 16px;
+            height: 48px;
+            background: #F7F7F7;
+            mix-blend-mode: normal;
+            opacity: 0.24;
+            border-radius: 3px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 16px;
+            letter-spacing: 0.8px;
+            color: #FFFFFF;
+            border: none;
+        }
+    }
+
+    &__account {
+        width: 149px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & a {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            line-height: 16px;
+            text-align: right;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+    }
+
+    &__shopping {
+        display: flex;
+    }
+
+    &__cart {
+        position: relative;
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        background: #F2DA91;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08);
+        & span {
+            position: absolute;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            color: #000000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__signin {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10px;
+            width: 2px;
+            height: 68%;
+            background-color: #ffffff;
+        }
+    }
+    
+    &__information {
+        display: flex;
+        max-width: 641px;
+        list-style-type: none;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 24px;
+        padding-left: 0;
+    }
+
+    &__info {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+        flex-wrap: wrap;
+    }
+
+    & .hamburger {
+        width: 20px;
+        height: 15px;
+        & span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 2px;
+            transition: .5s all
+        }
+    }
+    &__search-mobile {
+        display: none;
+    }
+    &-active {
+        background-color: #FFFFFF;
+    }
+}
+
+
+
+
+
+
