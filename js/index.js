@@ -3,7 +3,9 @@ window.addEventListener('DOMContentLoaded', () => {
           chevron = document.querySelectorAll('.right'),
           list = document.querySelectorAll('.footer__list'),
           hamburger = document.querySelector('.hamburger'),
-          sidePanel = document.querySelector('.sidepanel');
+          sidePanel = document.querySelector('.sidepanel'),
+          searchOpen = document.querySelector('.search-btn i'),
+          searchClose = document.querySelector('.search-btn .close');
 
 
     hamburger.addEventListener('click', () => {
@@ -45,6 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('i').forEach(icon => {
             icon.style.cssText = 'color: #000000';
         })
+        document.querySelectorAll('.close span').forEach(span => {
+            span.style.cssText = 'background-color: #000000';
+        })
+        document.querySelector('.navigation__search-mobile input').style.opacity = 'inherit';
     }
 
     function makeWhite() {
@@ -62,7 +68,14 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.navigation__searchbar').style.opacity = '';
         document.querySelectorAll('i').forEach(icon => {
             icon.style.cssText = 'color: #ffffff';
+            if (searchOpen) {
+                console.log('true');
+            }
+        });
+        document.querySelectorAll('.close span').forEach(span => {
+            span.style.cssText = 'background-color: #ffffff';
         })
+        document.querySelector('.navigation__search-mobile input').style.opacity = '';
     }
 
     function changeNavByScrollToBlack() {
@@ -73,6 +86,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     document.querySelector('.search-btn').addEventListener('click', () => {
         document.querySelector('.header .navigation__search-mobile').classList.toggle('show');
     })
@@ -80,6 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let imgArray = ['images/bg/mainbg.png', 'images/bg/mainbg2.png'], 
         main = document.querySelector('.main'),
         i = 1;
+
 
     function switchBg() {
         if(i > (imgArray.length - 1)) {
@@ -93,7 +108,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
-    setInterval(switchBg, 5000);
+    setInterval(switchBg, 2000)
     window.addEventListener('scroll', changeNavByScrollToBlack)
 })

@@ -14,8 +14,16 @@
     display: block;
 }
 
+.hide {
+    display: none;
+}
+
 .sidepanel {
     display: none;
+}
+
+.white {
+    color: #ffffff;
 }
 
 input[type=text]::-ms-clear { 

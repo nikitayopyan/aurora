@@ -1,7 +1,7 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .sidepanel {
         display: flex;
-        position: absolute;
+        position: fixed;
         flex-direction: column;
         align-items: center;
         padding: 24px 0 111px 0;
@@ -87,6 +87,7 @@
                     & input {
                         width: 100%;
                         padding: 12px;
+                        padding-right: 60px;
                         height: 48px;
                         margin-top: 15px;
                         background: #F7F7F7;
@@ -118,6 +119,23 @@
             }
         }
     }
+    .close {
+        display: none;
+        transform: translate(-6px, 8px);
+        & span {
+            display: block;
+            width: 1.5px;
+            height: 20px;
+            background-color: #ffffff;
+            &:first-child {
+                transform: rotate(45deg);
+            }
+            &:last-child {
+                transform: translateY(-19px) rotate(-45deg);
+            }
+        }
+    }
+    
 
     .main {
         &__title {
