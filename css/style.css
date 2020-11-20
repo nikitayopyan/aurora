@@ -299,18 +299,18 @@
   color: #ffffff;
 }
 
-.mailing {
+.mail {
   min-height: 146px;
   padding: 32px 0;
   max-width: 440px;
   margin: 0 auto;
 }
 
-.mailing .container {
+.mail .container {
   padding: 0;
 }
 
-.mailing__post {
+.mail__post {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
@@ -320,7 +320,7 @@
   color: #000000;
 }
 
-.mailing #form {
+.mail #form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +330,7 @@
   margin-top: 14px;
 }
 
-.mailing input {
+.mail input {
   width: 100%;
   margin-right: 8px;
   height: 32px;
@@ -345,11 +345,11 @@
   letter-spacing: 0.8px;
 }
 
-.mailing input::-webkit-input-placeholder {
+.mail input::-webkit-input-placeholder {
   color: #4A4A4A;
 }
 
-.mailing__button {
+.mail__button {
   height: 32px;
   width: 94px;
   border-radius: 3px;
@@ -461,10 +461,6 @@
 
 .sidepanel {
   display: none;
-}
-
-.white {
-  color: #ffffff;
 }
 
 input[type=text]::-ms-clear {
@@ -648,7 +644,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .main__title {
     display: none;
   }
-  .mailing {
+  .mail {
     padding: 32px 16px;
   }
   .footer {
@@ -707,6 +703,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .navigation__links .notRegistered {
     display: none;
+  }
+  .isRegistered {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 @import 'blocks/main';
-@import 'blocks/mailing';
+@import 'blocks/mail';
 @import 'blocks/footer';
 
 
@@ -22,9 +22,6 @@
     display: none;
 }
 
-.white {
-    color: #ffffff;
-}
 
 input[type=text]::-ms-clear { 
     display: none; width : 0; height: 0; 
